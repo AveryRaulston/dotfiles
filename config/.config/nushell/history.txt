@@ -9215,3 +9215,19 @@ git add .
 git commit -m "alacritty themes were missing"
 git push
 ls
+git add .
+git commit -m "alacritty themes were missing"
+r
+git push
+../
+qvm-copy-to-vm college dotfiles/
+$env.HOME
+ls dotfiles/
+cd dotfiles/
+ls | where type == dir
+ls | where type == dir | each {|d| stow $d}
+ls | where type == dir | get name | each {|d| stow $d}
+ls | where type == dir | get name | each {|d| stow $d --adopt}
+nv dotfiles/README.md
+git add .
+dotfiles/
