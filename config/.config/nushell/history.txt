@@ -9201,3 +9201,13 @@ history | less
 ls
 r
 ls
+git add .
+git commit -m "added cargo file for nushell"
+git config --global user.name "Avery Raulston"
+git config --global user.email "averyraulston01@protonmail.com"
+git commit -m "added cargo file for nushell"
+git push
+ls
+stow config 
+stow config --adopt
+r
