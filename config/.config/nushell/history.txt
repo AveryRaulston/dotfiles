@@ -9133,3 +9133,12 @@ stow config/ --adopt
 r
 stow fonts/ --adopt
 r
+git add .
+git commit -m "configs"
+git push
+r
+s
+r
+stow config/
+stow config/ --adopt
+r
