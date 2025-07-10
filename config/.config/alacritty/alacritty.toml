@@ -1,0 +1,45 @@
+[window]
+opacity=1
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 14
+
+[font.bold]
+family = "JetBrainsMonoNerdFont"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMonoNerdFont"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMonoNerdFont"
+style = "Regular"
+
+#[font.offset]
+#x = 1
+#y = 10
+#
+#[font.glyph_offset]
+#y = 5
+
+[keyboard]
+bindings = [
+{ key = "y", mods = "control", action = "Copy" },
+{ key = "v", mods = "control", action = "Paste" },
+{ key = "Space", mods = "control", action = "ToggleViMode" },
+]
+
+[cursor]
+
+[general]
+import = [ "~/.config/alacritty/themes/themes/gruvbox_dark.toml" ] # I edited this one
+
+[terminal]
+
+
+shell = "/usr/bin/nu"
+
