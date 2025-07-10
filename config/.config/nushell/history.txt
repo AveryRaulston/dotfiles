@@ -9211,3 +9211,7 @@ ls
 stow config 
 stow config --adopt
 r
+git add .
+git commit -m "alacritty themes were missing"
+git push
+ls
