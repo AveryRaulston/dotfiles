@@ -102,6 +102,7 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend '/home/user/.cargo/bin'
 $env.EDITOR = "nvim"
 $env.SHELL = "/bin/nu"
 
-oh-my-posh init nu --config ~/.config/oh-my-posh/my_config.omp.json --print | save ~/.config/oh-my-posh/oh-my-posh.nu --force
+#oh-my-posh init nu --config ~/.config/oh-my-posh/my_config.omp.json --print | save ~/.config/oh-my-posh/oh-my-posh.nu --force
+oh-my-posh init nu --config ~/.config/oh-my-posh/themes/gruvbox.omp.json --print | save ~/.config/oh-my-posh/oh-my-posh.nu --force
 
 alias nv = nvim

@@ -9120,25 +9120,84 @@ r
 nv backup.sh
 man rsync
 nv backup.sh
-git reset --hard 7a62830c8e8b2121b8189610bfbd52d9158411e8
+ls
+ls -a
+ls .config/g
+ls .config/
+cd .config/oh-my-posh/
+ls
+nv oh-my-posh.nu
+r
+oh-my-posh
+../
+curl -s https://ohmyposh.dev/install.sh | bash -s
+ls
+w
+ls
+ssh-keygen -t ed25519 -C "personal"
+ls .ssh
+r
+rm -rf .ssh/
+ssh-keygen -t ed25519 -C "personal"
+cat .ssh/id_ed25519.pub | xclip 
+cat .ssh/id_ed25519.pub 
+cat .ssh/id_ed25519.pub | xclip -selection clipboard -o
+cat .ssh/id_ed25519.pub | xclip 
+cat .ssh/id_ed25519.pub 
+ls
+cat zk | xclip
+man xclip
+cat .ssh/id_ed25519.pub | xclip -i
+xclip --help
+man xclip
+"hello" | xclip
+xclip 
+xclip -o 
+"hello" | xsel 
+xsel
+"hello" | xsel --clipboard
+copy
+clip
+cat .ssh/id_ed25519.pub | xsel --clipboard
+git clone git@gitlab.com:AveryRaulston/dotfiles.git
+stow
+cd dotfiles/
+ls
+stow config
+stow config --adopt
+ls
+stow fonts --adopt
+ls
+r
+ls
+qvm-copy-to-vm college dotfiles/
+ls
+r
+stow cargo --adopt
+stow cargo
+r
+stow cargo/ --adopt
+r
+ls
+..
+ls
+qvm-copy-to-vm college .cargo/
+ls
+cd dotfiles/
+ls
+stow --delete cargo
+r
+qvm-copy-to-vm college .cargo/
 ranger
-bash
-rnager
 r
-mkdir config
-mkdir fonts
+stow cargo
+stow cargo --adopt
+..
+ls
+qvm-copy-to-vm college dotfiles/
+history
+history | les
+history | less
+ls
 r
-stow config/
-stow config/ --adopt
-r
-stow fonts/ --adopt
-r
-git add .
-git commit -m "configs"
-git push
-r
-s
-r
-stow config/
-stow config/ --adopt
-r
+ls
