@@ -9231,3 +9231,34 @@ ls | where type == dir | get name | each {|d| stow $d --adopt}
 nv dotfiles/README.md
 git add .
 dotfiles/
+git add .
+git commit -m "updated README"
+git push
+exit
+ls .fonts/
+ls dotfiles/fonts/.fonts/
+ls
+ls dotfiles/
+ls dotfiles/fonts/.fonts/
+alacritty --version
+qvm-copy-to-vm vault dotfiles/
+cd dotfiles/
+r
+cd
+qvm-copy-to-vm vault dotfiles/
+ls
+r
+ls
+r
+ls
+let x = open BTC-USD_sdk-df.csv
+$x | last 5
+$x | first 5
+ls -a
+clear
+sudo nvim .Xresources 
+cat /etc/X11/Xresources
+cat .Xresources
+cd dotfiles/
+ls
+nv README.md
