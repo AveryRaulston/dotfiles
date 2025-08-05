@@ -8,16 +8,17 @@
 
   "modules-left": [
     //"custom/rofi",
+    // "clock",
     "sway/workspaces",
-    "sway/window",
-    "hyprland/workspaces",
+    // "sway/window",
+    // "hyprland/workspaces",
     "tray",
     "hyprland/window",
   ],
 
-  "modules-center": ["clock"],
+  "modules-right": ["clock"],
 
-  "modules-right": [
+  "modules-center": [
     "disk",
     "cpu",
     "memory",

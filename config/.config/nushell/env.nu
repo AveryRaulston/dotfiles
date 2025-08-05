@@ -98,7 +98,7 @@ $env.NU_PLUGIN_DIRS = [
 ]
 
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
-$env.PATH = ($env.PATH | split row (char esep) | prepend '/home/user/.cargo/bin') | prepend '/home/user/.local/bin' | prepend '/home/user/.ghcup/bin' | prepend '/home/user/.cabal/bin'
+$env.PATH = ($env.PATH | split row (char esep) | prepend '/home/user/.cargo/bin') | prepend '/home/user/.local/bin' | prepend '/home/user/.ghcup/bin' | prepend '/home/user/.cabal/bin' | prepend '/home/user/.nuScripts'
 $env.EDITOR = "nvim"
 $env.SHELL = "/bin/nu"
 
