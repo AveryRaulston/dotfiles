@@ -762,3 +762,8 @@ git push
 nv README.md
 cat README.md | wl-copy
 nv README.md
+git add .
+git commit -m "Markdown format test for README.md"
+git push
+nv README.md
+git commit -m "Markdown format test for README.md"
