@@ -756,3 +756,9 @@ sudo openfortivpn -c test_forti_config
 r
 ls
 nv README.md
+git add .
+git commit -m "Current"
+git push
+nv README.md
+cat README.md | wl-copy
+nv README.md
