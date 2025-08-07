@@ -767,3 +767,6 @@ git commit -m "Markdown format test for README.md"
 git push
 nv README.md
 git commit -m "Markdown format test for README.md"
+git commit -am "Markdown format test for README.md"
+git push
+nv README.md
