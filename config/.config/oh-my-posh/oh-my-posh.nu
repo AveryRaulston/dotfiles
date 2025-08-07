@@ -6,7 +6,7 @@ if ($env.config? | is-not-empty) {
 $env.POWERLINE_COMMAND = 'oh-my-posh'
 $env.POSH_THEME = (echo "/home/user/.config/oh-my-posh/themes/gruvbox.omp.json")
 $env.PROMPT_INDICATOR = ""
-$env.POSH_SESSION_ID = (echo "eb034988-bce7-40f7-8898-9b9c9eb8f2d1")
+$env.POSH_SESSION_ID = (echo "9f9c2382-165f-4397-8a5e-b2a37c42ba40")
 $env.POSH_SHELL = "nu"
 $env.POSH_SHELL_VERSION = (version | get version)
 

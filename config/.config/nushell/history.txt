@@ -563,3 +563,196 @@ nv .config/kitty/kitty.conf
 r
 git add .
 r
+git add .
+git commit -m "switched to kitty from alacritty for ligatures"
+git push
+r
+clear
+ls
+clera
+pass -c Websites/personal_github
+r
+git clone git@github.com:AveryRaulston/stockBotTrader.git
+ls
+r
+cabal clean
+r
+cabal build
+cabal build --Wunused-matches 
+cabal build | less
+cabal build | save out.txt
+nv out.txt
+rm out.txt
+nv app/Main.hs
+cabal build | save out.txt
+nv app/Main.hs
+cabal build | save out.txt
+cabal build | save -f out.txt
+ls
+nv app/Main.hs
+cabal build | save -f out.txt
+nv app/Main.hs
+cabal build | save -f out.txt
+nv src/Push.hs
+nv app/Main.hs
+cabal build | save -f out.txt
+nv app/Main.hs
+cabal build | save -f out.txt
+ls
+r
+nv app/Main.hs
+cabal build | save -f out.txt
+nv app/Main.hs
+cabal build | save -f out.txt
+nv app/Main.hs
+cabal build | save -f out.txt
+ls
+cabal run
+nv app/Main.hs
+cabal run
+nv app/Main.hs
+cabal run
+nv app/Main.hs
+cabal run
+nv app/Main.hs
+cabal run
+nv app/Main.hs
+cabal run
+nv app/Main.hs
+cabal run
+ghci
+r
+cabal run
+nv app/Main.hs
+cabal run
+nv app/Main.hs
+cabal run
+nv app/Main.hs
+ls
+cabal run
+nv app/Main.hs
+cabal run
+nv app/Main.hs
+cabal run
+nv app/Main.hs
+git branch -m benchmarking
+nv app/Main.hs
+cabal run
+nv app/Main.hs
+cabal run
+nv app/Main.hs
+cabal run
+nv HushGP.cabal
+cabal run
+nv HushGP.cabal
+nv app/Main.hs
+cabal run
+nv app/Main.hs
+git add .
+git commit -m "Very basic benchmarking code completed. Now it's time to clean up the output and configure the benchmarking. After that we make the mutable interpreter to compare."
+git push
+git push --set-upstream origin benchmarking 
+git branch
+nv app/Main.hs
+cabal bench
+r
+nv app/Main.hs
+history
+history | grep forti
+ls
+sudo openfortivpn -c test_forti_config
+s
+nv /boot/grub2/grub.cfg
+sudo nv /boot/grub2/grub.cfg
+sudo nvim /boot/grub2/grub.cfg
+cat /boot/loader/entries/
+sudo cat /boot/loader/entries/
+sudo ls /boot/loader/entries/
+clear
+r
+cabal build
+nv /boot/grub2/grub.cfg
+nv HushGP.cabal
+cabal build
+r
+mv Main.hs Bench.hs
+r
+cabal build
+nv HushGP.cabal
+nv app/Main.hs
+nv HushGP.cabal
+cabal build
+cabal run
+cabal bench
+nv HushGP.cabal
+cabal bench
+nv HushGP.cabal
+cabal bench
+git add 
+git add .
+git commit -m "Configured cabal to compile the benchmarking code and the main code separately. Run cabal bench to run the benchmark code. Also changed the common properties section some"
+git push
+ls
+nv benchmark/
+r
+mv LazyFunctionStateThreads.pdf LazyFunctionStateThreads_Launchbury.pdf
+ls
+s
+r
+cabal bench
+r
+cabal bench
+nv benchmark/Bench.hs
+cabal bench
+nv benchmark/Bench.hs
+cabal bench
+nv benchmark/Bench.hs
+cabal bench
+git log
+r
+git add .
+git commit -m "Benchmarking unnecessary, I had a fundamental misunderstanding of how Haskell manages immutability."
+git push
+r
+git branch
+git switch RowanProgress
+r
+git switch TaylorLastCommit
+r
+git switch RowanProgress
+r
+cabal build
+r
+cabal build
+r
+nv HushGP.cabal
+cabal install hmatrix
+cabal build
+dnf search black 
+dnf search blas
+dnf search blas | less
+dnf search lapack
+bash
+cabal build
+dnf search lapack 
+bash
+dnf search blas
+sudo dnf remove blas deved
+sudo dnf remove blas devel
+sudo dnf remove blas lapack
+bash
+r
+cabal build
+r
+git switch TaylorLastCommit
+r
+ls
+r
+sudo openfortivpn -c test_forti_config
+smbclient
+sudo openfortivpn -c test_forti_config
+reboot
+sudo openfortivpn -c test_forti_config
+r
+ls
+nv README.md
