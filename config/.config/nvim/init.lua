@@ -68,9 +68,9 @@ vim.api.nvim_create_user_command("ClangFormatCurrentFile", function()
 -- turn on diagnostic text in normal mode
 -- vim.diagnostic.config({ virtual_text = true })
 vim.api.nvim_create_user_command("ToggleVirtualText", function()
-    local current = vim.diagnostic.config().virtual_text
+    local current = vim.diagnostic.config().virtual_lines
     vim.diagnostic.config({ 
-        virtual_text = not current
+        virtual_lines = not current
     })
     end, {
     desc = "Toggles virtual text" 
@@ -84,3 +84,9 @@ vim.keymap.set("n", " cf", ":ClangFormatCurrentFile<CR>", { noremap = true, sile
 
 --turn off highlighting after a search by pressing esc
 vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>')
+
+vim.keymap.set('n', '<leader>tt', function()
+    local trouble = require('trouble')
+    trouble.toggle()
+end, { desc = 'Toggle Focus in Trouble' })
+

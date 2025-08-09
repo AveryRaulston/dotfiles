@@ -62,7 +62,7 @@ $env.PROMPT_COMMAND = {||
         do --env $env.SET_POSHCONTEXT
     }
 
-    _omp_get_prompt primary $"--cleared=($clear)"
+    _omp_get_prompt primary $"--cleared=($clear)" | append "\n" | str join " "
 }
 
 $env.PROMPT_COMMAND_RIGHT = {|| _omp_get_prompt right }

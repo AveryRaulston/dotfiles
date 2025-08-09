@@ -770,3 +770,749 @@ git commit -m "Markdown format test for README.md"
 git commit -am "Markdown format test for README.md"
 git push
 nv README.md
+git commit -am "Markdown formatting for README.md"
+git push
+cd
+nv backup_script_to_enable_repos_and_install_all_packages.sh
+ls
+nv test_forti_config
+dnf search openfortivpn
+update
+sudo dnf downgrade openfortivpn
+nslookup files.times.edu
+nslookup smb://files.times.edu
+nslookup smb://files.times.uh.edu
+nslookup files.times.uh.edu
+My Dotfiles - managed with stow:<\n>    https://www.gnu.org/software/stow/<\n><\n>To use my dotfiles:<\n>    Clone repo in $HOME (or $env.HOME if you use nushell like me)<\n>    cd dotfiles/<\n>    stow cargo<\n>    stow config<\n>    stow fonts<\n><\n>   <\n>Alternatively (nushell only):<\n>    Clone repo in $env.HOME <\n>    cd dotfiles/<\n>    ls | where type == dir | get name | each {|d| stow $d --adopt}<\n>
+clear
+nslookup files.times.uh.edu
+clear
+x | wl-copy
+"x" | wl-copy
+nslookup files.times.uh.edu
+cat test_forti_config
+smbclient //172.27.82.60 -U araulsto
+sudo openfortivpn -c test_forti_config
+smbclient \\172.27.82.60 -U araulsto
+sudo mount -t cifs //172.27.82.60 /mnt/ -o username=arauslto,password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+dmesg
+sudo dmesg
+sudo mount -t cifs //172.27.82.60 /mnt/ -o username=arauslto,password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+ls /mnt
+cd /mnt
+r
+cd
+sudo mount -t cifs //172.27.82.60 /mnt/houston -o username=arauslto,password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+sudo mkdir /mnt/houston
+sudo mount -t cifs //172.27.82.60 /mnt/houston -o username=arauslto,password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+man mount.cifs
+sudo mount -t cifs //172.27.82.60/share /mnt/houston -o username=arauslto,password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+cd /mnt/houston/
+ls
+..
+ls
+man mount.cifs
+sudo mount -t cifs //172.27.82.60/share /mnt/houston -o username=arauslto password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+sudo mount -t cifs //172.27.82.60/share /mnt/houston -o username=arauslto -o password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+sudo mount -t cifs //172.27.82.60/share /mnt/houston/ -o username=arauslto -o password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+man mount.cifs
+cd
+touch credentials.txt
+nv credentials.txt
+sudo mount -t cifs //172.27.82.60/share /mnt/houston/ -o credentials=credentials.txt
+sudo mount -t cifs //172.27.82.60/share /mnt/houston/ -o credentials=/home/user/credentials.txt
+sudo openfortivpn -c test_forti_config
+kill 40963
+kill -9 40963
+clear
+ls
+clear
+openfortivpn --help
+openfortivpn --help | less
+sudo openfortivpn -c test_forti_config
+reboot
+sudo openfortivpn -c test_forti_config
+sudo mount -t cifs //172.27.82.60/share /mnt/houston/ -o credentials=/home/user/credentials.txt
+nv credentials.txt
+sudo mount -t cifs //172.27.82.60/share /mnt/houston/ -o username=arauslto -o password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+sudo mount -t cifs //172.27.82.60/ /mnt/houston/ -o username=arauslto -o password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+sudo mount -t cifs //172.27.82.60/ /mnt/houston/Labs -o username=arauslto -o password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+sudo mount -t cifs //172.27.82.60/Labs /mnt/houston/ -o username=arauslto -o password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+sudo mount -t cifs //files.times.uh.edu/Labs /mnt/houston/ -o username=arauslto -o password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+sudo mount -t cifs //files.times.uh.edu/ /mnt/houston/ -o username=arauslto -o password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+sudo mount -t cifs //files.times.uh.edu/share /mnt/houston/ -o username=arauslto -o password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+sudo mount -t cifs //files.times.uh.edu/labs /mnt/houston/ -o username=arauslto -o password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+sudo mount -t cifs //files.times.uh.edu/labs/ /mnt/houston/ -o username=arauslto -o password=ScP7AEpHCpKw4XMrVdqDfrxZzT54Xg1
+ls /mnt
+r
+cd /mnt
+r
+sudo rmdir /mnt/houston/
+sudo rmdir /mnt/pico/
+cd /
+r
+cd
+ls
+open GnGAccuracyWide.csv
+sudo mount -t cifs //files.times.uh.edu/labs/ /mnt/houston/
+sudo mkdir /mnt/houston
+sudo mount -t cifs //files.times.uh.edu/labs/ /mnt/houston/ -U araulsto
+sudo mount -t cifs //files.times.uh.edu/ /mnt/houston/ -U araulsto
+cat test_forti_config
+sudo mount -t cifs //files.times.uh.edu/ /mnt/houston/ -o username=arauslto 
+ls
+nv credentials.txt
+gvfs
+ls -a
+ls /run/user/1000/
+id -u
+cd /run/user/1000/
+r
+s
+sudo openfortivpn -c test_forti_config
+s
+sudo modprobe -r kvm-intel
+r
+git switch RowanProgress
+r
+sudo openfortivpn -c test_forti_config
+ls
+r
+git switch TaylorLastCommit
+r
+cal 
+cal --help
+cal --full-year 2025
+cal --full-year 2026
+34 / 4
+(34 / 4) - 3
+(31 / 4)
+s
+r
+git switch RowanProgress
+r
+git switch TaylorLastCommit
+sudo openfortivpn -c test_forti_config
+r
+git branch -m main
+git switch benchmarking
+ls
+man git checkout
+man git
+git checkout --help
+git checkout -h
+git switch main
+git merge benchmarking
+git add .
+git commit -m "merged with benchmarking - added benchmarking code"
+git push
+git push origin HEAD:TaylorLastCommit 
+pass -c Websites/personal_github
+kill 10018
+ls .password-store/
+cd .password-store/
+r
+pass -c Websites/personal_github
+ps | head
+ps | where pid=10018
+ps | where pid = 10018
+ps | where $pid = 10018
+ps | where pid == 10018
+sudo o
+ls .gnupg/
+cd .gnupg/
+r
+pass -c Websites/personal_github
+git push
+git push origin HEAD
+ps | head
+ps | where name | str contains 'thunar'
+ps | less
+ps | where (name | str contains 'thunar')
+ps | where {|name| $name | str contains 'thunar'}
+ps | where name == thunar
+kill 6818
+thunar
+ps | where name == thunar
+kill 10483
+ps | where name == thunar
+thunar
+ps | where name == thunar
+reboot
+r
+cd HushGP/
+git branch
+r
+git switch benchmarking
+r
+git switch main
+git branch -d benchmarking
+git branch CombineCodeExec
+git switch CombineCodeExec
+r
+reboot
+update
+r
+nv Push.hs
+rm ~/.local/state/nvim/swap/%home%user%Repos%GitHub%Mine%HushGP%src%Push.hs.swp
+nv Push.hs
+cd .config/nvim
+nv Push.hs
+r
+nvim -v
+nv Push.hs
+ls
+nv Push.hs
+nv treesitter.lua
+nv Push.hs
+sudo dnf downgrade nvim
+nv Push.hs
+vis Push.hs
+nv Push.hs
+../..
+cd HushGP/
+ls
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+cabal run
+git add .
+git commit -m "removed unnecessary stacks, renamed variables"
+git push
+git push --set-upstream origin CombineCodeExec 
+nv src/Push.hs
+nv app/Main.hs
+cal
+nv src/Push.hs
+cabal run
+nv src/Push.hs
+cabal run
+nv src/Push.hs
+cabal run
+nv src/Push.hs
+cabal run
+nv src/Push.hs
+cabal run
+nv src/Push.hs
+cabal run
+nv src/Push.hs
+cabal run
+nv src/Push.hs
+cabal run
+nv src/Push.hs
+cabal run
+nv src/Push.hs
+cabal run
+pass -c Websites/androit_university_of_houston
+pass -c Websites/bank_of_salem
+nv src/Push.hs
+pass -c Websites/bank_of_salem
+cabal run
+nv src/Push.hs
+cabal run
+nv src/Push.hs
+cabal run
+nv src/Push.hs
+cabal run
+nv src/Push.hs
+cabal run
+cd Repos/GitHub/Mine/HushGP/
+git switch main
+git status
+nv src/Push.hs
+git worktree add ../test
+r
+git switch main
+git worktree list
+r
+git switch main
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+nv src/Push.hs
+cabal build
+cabal run
+nv src/Push.hs
+cabal run
+nv src/Push.hs
+cabal run
+nv src/Push.hs
+git commit -am "app/Main.hs now compiles with new interpreter. Benchmarking strict vs. non-strict next"
+git push
+r
+git worktree list
+git worktree remove ../test
+git worktree list
+r
+ls
+git branch
+git branch test
+git switch test
+ls
+r
+git switch CombineCodeExec
+git branch -d test
+git switch BenchmarkingStrictNonStrictNewInterpreter
+git branch BenchmarkingStrictNonStrictNewInterpreter
+git switch BenchmarkingStrictNonStrictNewInterpreter
+nv src/Push.hs
+git add .
+git commit -m "just a bunch of links rn"
+git push
+git push --set-upstream origin BenchmarkingStrictNonStrictNewInterpreter 
+pass -c Websites/personal_github
+pass -c Websites/personal_email
+git branch
+git branch -r
+git switch mlinalg
+r
+git branch
+git switch main
+git repo edit --default-branch main
+gh 
+git push -u origin main
+git log --tree
+git log -h
+git show -h
+r
+git switch BenchmarkingStrictNonStrictNewInterpreter
+ls
+nv src/Push.hs
+cd src
+ls
+cp Push.hs PushStrict.hs
+..
+nv src/PushStrict.hs
+cabal build
+nv app/Main.hs
+r
+cabal build
+nv HushGP.cabal
+r
+diff Push.hs PushStrict.hs
+nv HushGP.cabal
+r
+cabal bench
+nv HushGP.cabal
+nv benchmark/Bench.hs
+cd Repos/GitHub/Mine/HushGP/
+nv benchmark/Bench.hs
+nv benchmark/Bench.hs
+cabal bench
+nv benchmark/Bench.hs
+nv .config/nushell/oh-my-posh.nu
+nv /home/user/.local/bin/oh-my-posh
+nv .config/nushell/oh-my-posh.nu
+nv .config/oh-my-posh/oh-my-posh.nu
+nv .config/oh-my-posh/my_config.omp.json
+ls
+cat .config/oh-my-posh/my_config.omp.json | wl-copy
+exit
+nu
+ls
+nv .config/oh-my-posh/my_config.omp.json
+nv .config/nushell/oh-my-posh.nu
+cat .config/nushell/oh-my-posh.nu| wl-copy
+nv .config/nushell/oh-my-posh.nu
+nv /home/user/.config/oh-my-posh/themes/gruvbox.omp.json
+nv /home/user/.config/oh-my-posh/themes/gruvbox.omp.json | wl-copy
+cat /home/user/.config/oh-my-posh/themes/gruvbox.omp.json | wl-copy
+nv /home/user/.config/oh-my-posh/themes/gruvbox.omp.json
+cat .config/nushell/oh-my-posh.nu| wl-copy
+exit
+nu
+cd Repos/GitHub/Mine/HushGP/
+ls
+nv /home/user/.config/oh-my-posh/themes/gruvbox.omp.json 
+"hello" | append "world"
+cd Repos/GitHub/Mine/HushGP/
+clear
+ls
+nv .config/nushell/oh-my-posh.nu
+clear
+cabal bench
+58.79 / 63.04
+63.04 / 58.79 
+nv HushGP.cabal
+cabal configure --enable-profiling
+ls
+nv cabal.project.local
+nv .nuScripts/what_to_do.nu
+cabal run +RTS -pj -RTS
+cabal run profile +RTS -pj -RTS
+cabal run HushGP +RTS -pj -RTS
+cabal build -prof
+cabal build --prof
+cabal run HushGP +RTS -pj -RTS
+nv cabal.project.local
+nv HushGP.cabal
+cabal run HushGP +RTS -pj -RTS
+cabal build
+nv HushGP.cabal
+cabal build
+cabal run HushGP +RTS -pj -RTS
+cabal build
+nv app/Main.hs
+cabal build
+cabal run HushGP +RTS -pj -RTS
+cabal run HushGP -- +RTS -pj -RTS
+cabal build --profiling
+ls
+rm cabal.project.local
+cabal build --profiling-enabled
+cabal build --enable-profiling
+ls
+nv out.txt
+rm out.txt
+ls
+nv HushGP.prof
+nv HushGP.cabal
+cabal build --enable-profiling
+cabal run HushGP +RTS -pj -RTS
+cabal run HushGP -- +RTS -pj -RTS
+cabal build --enable-profiling
+cabal run HushGP -- +RTS -pj -RTS
+cabal build --enable-profiling
+cabal run HushGP -- +RTS -pj -RTS
+cabal run
+cabal build
+cabal run
+cabal build --enable-profiling
+cabal run HushGP -- +RTS -pj -RTS
+cabal build 
+cabal run
+cabal build --enable-profiling
+cabal run HushGP -- +RTS -pj -RTS
+cabal run HushGP -- +RTS -pj -RTS --enable-profiling
+nv HushGP.cabal
+cabal build --enable-profiling
+cabal build --enable-profiling --enable-library-profiling
+cabal run
+cabal build --enable-profiling --enable-library-profiling
+cabal list-bin
+cabal build --enable-profiling --enable-library-profiling
+cabal run HushGP -- +RTS -pj -RTS --enable-profiling
+cabal run HushGP -- +RTS -pj -RTS 
+cabal run HushGP +RTS -pj -RTS 
+cabal build --enable-profiling 
+cabal run HushGP +RTS -pj -RTS 
+cabal run HushGP  -- +RTS -pj -RTS 
+cabal build --enable-profiling 
+cabal run HushGP  -- +RTS -pj -RTS 
+cabal run HushGP  -- +RTS -pj -RTS --enable-profiling
+cabal run HushGP  --enable-profiling -- +RTS -pj -RTS 
+cabal build --enable-profiling -- +RTS -pj -RTS
+nv .nuScripts/cabalProfile.nu
+chmod +x .nuScripts/cabalProfile.nu
+cabalProfile.nu 
+nv .nuScripts/cabalProfile.nu
+cat .nuScripts/what_to_do.nu
+cat .nuScripts/what_to_do.nu | head
+nv .nuScripts/what_to_do.nu
+cabalProfile.nu 
+cabalProfile.nu HushGP
+ls
+nv HushGP.cabal
+nv HushGP.prof
+cabalProfile.nu HushGP
+nv HushGP.prof
+ls
+nv HushGP.prof
+cabal run HushGP  --enable-profiling -- +RTS -hc
+nv HushGP.prof
+nv HushGP.cabal
+cabal bench
+nv HushGP.cabal
+cabal build
+cabal run
+cabal bench
+git log
+nv benchmark/Bench.hs
+s
+pass -c Websites/alex_bitwarden
+Ste11@=Sausage
+s
+cd Repos/GitHub/Mine/HushGP/
+cabal bench
+cd Repos/GitHub/Mine/HushGP/
+cabal bench
+4.021 / 3.747
+r
+ls
+nv Makefile
+nv benchmark/Bench.hs
+cabal bench
+3.982 / 3.667
+cabal bench
+ls
+nv benchmark_outputs.txt
+git commit -am "New Interpreter benchmarked strict vs non-strict"
+git push
+git switch CombineCodeExec
+ls
+nv out.txt
+nv src/Push.hs
+ls
+nv HushGP.cabal
+git log --graph
+git switch BenchmarkingStrictNonStrictNewInterpreter
+git log --graph
+git log --graph --all
+git log --graph --all --decorate
+git log --graph --all --decorate --oneline
+git log --graph --all --decorate --oneline --pretty=short
+git log --graph --all --decorate --oneline --pretty=medium
+git log --graph --all --decorate --oneline --pretty=full
+git log --graph 
+git switch main
+git log --graph 
+git log --graph --oneline
+git switch CombineCodeExec
+git log --graph --oneline
+git log --graph --oneline --decorate --all
+gtk --all
+dnf search gtk
+dnf search gitk
+sudo dnf install gitk
+gitk --all
+ls
+sudo dnf remove gitk
+git merge BenchmarkingStrictNonStrictNewInterpreter
+git log --graph --oneline --decorate --all
+git commit -am "merged benchmarking changes"
+git add .
+git commit -am "merged benchmarking changes"
+git log --graph --oneline --decorate --all
+git push
+git log --graph --oneline --decorate --all
+git switch main
+ls
+r
+git switch CombineCodeExec
+nv src/Push.hs
+git switch main
+nv src/Push.hs
+nv benchmark/Bench.hs
+cabal bench
+nv benchmark/Bench.hs
+nv src/Push.hs
+ls
+git checkout -- .
+git switch CombineCodeExec
+ls
+nv src/Push.hs
+cabal bench
+4.155 / 3.758
+nv benchmark_outputs.txt
+ls
+git branch
+git branch -d BenchmarkingStrictNonStrictNewInterpreter
+git branch -d BenchmarkingStrictNonStrictBothInterpreters
+git branch BenchmarkingStrictNonStrictBothInterpreters
+git switch BenchmarkingStrictNonStrictBothInterpreters
+nv benchmark_outputs.txt
+nv src/Push.hs
+nv benchmark/Bench.hs
+cabal bench
+git merge main
+git commit -am "changed function names for prep to Push.hs file from main"
+git push
+git push --set-upstream origin BenchmarkingStrictNonStrictBothInterpreters 
+git show main:src/Push.hs > mainPush.hs
+git show main:src/Push.hs |save  mainPush.hs
+git merge-file src/Push.hs mainPush.hs src/Push.hs
+nv src/Push.hs
+r
+git merge-file --help
+git merge-file -h
+git merge-file mainPush.hs src/Push.hs src/Push.hs
+r
+nv src/Push.hs
+rm mainPush.hs
+ls
+nv src/Push.hs
+git commit -am "copied original interpreter functions into Push.hs for benchmark comparisions"
+git push
+nv src/Push.hs
+nv benchmark/Bench.hs
+cabal bench
+nv benchmark/Bench.hs
+cabal bench
+git log
+git branch
+git switch CombineCodeExec
+nv benchmark/Bench.hs
+git stash
+git switch CombineCodeExec
+nv src/Push.hs
+r
+nv benchmark/Bench.hs
+ls
+git branch -d BenchmarkingStrictNonStrictBothInterpreters
+git branch
+git stash list
+git stash clear
+cabal bench
+4.119 / 3.734
+nv benchmark/Bench.hs
+git switch main
+nv benchmark/Bench.hs
+nv src/Push.hs
+git show CombineCodeExec:benchmark/Bench.hs | save combineBench.hs
+cabal bench
+cabale bench
+cabal bench
+rm combineBench.hs
+nv benchmark/Bench.hs
+ls
+cabal bench
+git add .
+ls
+r
+git commit -am "benchmarking original interpreter"
+git push
+git switch CombineCodeExec
+ls
+nv benchmark_outputs.txt
+nv benchmark/Bench.hs
+nv benchmark/Bench.hs
+cabal bench
+nv benchmark_outputs.txt
+nv src/Push.hs
+nv benchmark/Bench.hs
+cabal bench
+nv benchmark_outputs.txt
+git commit -am "benchmarking results recorded"
+git switch main
+nv src/Push.hs
+cabal bench
+nv src/Push.hs
+nv benchmark/Bench.hs
+git checkout -- .
+git switch CombineCodeExec
+nv benchmark_outputs.txt
+ls
+nv benchmark/Bench.hs
+cabal bench
+git commit -am "benchmarking results recorded"
+git push
+git branch
+git log --graph --oneline --decorate --all
+git log --graph --decorate --all
+nv src/Push.hs
+nv benchmark/Bench.hs
+git repo list
+git remote
+git remote show
+git branch -r
+git branch
+git switch benchmarkin
+git switch benchmarking
+ls
+r
+git switch CombineCodeExec
+git branch -d benchmarking
+git push origin --delete benchmarking
+git branch -r
+git push origin --delete origin/BenchmarkingStrictNonStrictBothInterpreters
+git branch -r
+git push origin --delete origin/BenchmarkingStrictNonStrictNewInterpreter
+pass -c Websites/personal_github
+pass -c Websites/personal_email
+git remote -v
+nv app/Main.hs
+cabal build
+nv app/Main.hs
+cabal --version
+cd .config/nvim
+ls
+ls lua/
+ls
+cd lua/plugins/
+ls
+hls -v
+hls 
+nv app/Main.hs
+nv HushGP.cabal
+nv lsp.lua
+ghcup uninstall hls
+ghcup remove hls
+ghcup rm hls
+ghcup list
+ghcup rm hls 2.10.0.0
+ghcup install hls
+nv app/Main.hs
+ghcup list hls
+ghcup list | less
+ghcup list
+ghcup list | grep hls
+ghcup rm hls 2.10.0.0
+ghcup install hls 2.11.0.0
+ghcup rm hls 2.11.0.0
+ghcup install hls
+cabal --version
+ghcup list | grep cabal
+cabal --version
+ghcup rm cabal 3.16.0.0
+cabal --version
+which -a cabal
+bash
+dnf search cabal
+sudo dnf remove cabal-install
+which -a cabal
+rm /home/user/.cabal/bin/cabal
+cabal --version
+nv app/Main.hs
+cabal build
+../../
+ls
+nv app/Main.hs
+nv init.lua
+cd lua/plugins/
+ls
+nv app/Main.hs
+nv trouble.lua
+nv lsp.lua
+nv app/Main.hs
+cabal build
+cabal run
+nv app/Main.hs
+r
+cat trouble.lua | wl-copy
+nv app/Main.hs
+nv trouble.lua
+nv app/Main.hs
+r

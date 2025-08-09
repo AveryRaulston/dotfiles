@@ -26,7 +26,8 @@
           "type": "root"
         }
       ],
-      "type": "prompt"
+      "type": "prompt",
+      "newline": true
     },
     {
       "alignment": "right",
@@ -152,7 +153,8 @@
           "type": "time"
         }
       ],
-      "type": "prompt"
+      "type": "prompt",
+      "newline": true
     },
     {
       "alignment": "left",
@@ -181,11 +183,12 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "<#C40233>\ue285\ueb9e ",
+          "template": "<#C40233>\ue285\ueb9e \n ",
           "type": "status"
         }
       ],
-      "type": "prompt"
+      "type": "prompt",
+      "newline": true
     }
   ],
   "version": 3
