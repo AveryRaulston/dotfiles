@@ -1,5 +1,6 @@
-# My Dotfiles - managed with stow:
-- https://www.gnu.org/software/stow/
+# My Dotfiles - Managed with Stow
+- To learn about stow: 
+    - https://www.gnu.org/software/stow/
 
 ## To use my dotfiles:
 1. Clone repo in $HOME / $env.HOME
