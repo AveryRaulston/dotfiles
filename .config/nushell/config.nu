@@ -20,6 +20,8 @@
 $env.EDITOR = "nvim"
 $env.config.history.max_size = 10000
 $env.config.edit_mode = "vi"
+$env.config.show_banner = false
+$env.LS_COLORS = (vivid generate gruvbox-dark-hard)
 $env.PATH = $env.PATH | prepend "~/.ghcup/bin/" | prepend "/home/user/.ghcup/ghc/9.6.7/bin" | prepend "~/.shellScripts"
 
 def --env r [] { 
@@ -31,14 +33,8 @@ def --env r [] {
 alias nv = nvim
 oh-my-posh init nu --config /usr/share/oh-my-posh/themes/gruvbox.omp.json
 
-$env.config.show_banner = false
-# Completer stuff below here
 
-let carapace_completer = {|spans: list<string>|
-    carapace $spans.0 nushell ...$spans
-    | from json
-    | if ($in | default [] | where value =~ '^-.*ERR$' | is-empty) { $in } else { null }
-}
+# Completer stuff below here
 
 let fish_completer = {|spans|
     fish --command $"complete '--do-complete=($spans | str replace --all "'" "\\'" | str join ' ')'"
@@ -54,29 +50,4 @@ let fish_completer = {|spans|
     }
 }
 
-# This completer will use carapace by default
-let external_completer = {|spans|
-    let expanded_alias = scope aliases
-    | where name == $spans.0
-    | get -o 0.expansion
-
-    let spans = if $expanded_alias != null {
-        $spans
-        | skip 1
-        | prepend ($expanded_alias | split row ' ' | take 1)
-    } else {
-        $spans
-    }
-
-    match $spans.0 {
-        # carapace completions are incorrect for nu
-        nu => $fish_completer
-        # fish completes commits and branch names in a nicer way
-        git => $fish_completer
-        # carapace doesn't have completions for asdf
-        asdf => $fish_completer
-        _ => $carapace_completer
-    } | do $in $spans
-}
-
-$env.config.completions.external.completer = $external_completer
+$env.config.completions.external.completer = $fish_completer
