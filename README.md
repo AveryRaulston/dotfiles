@@ -6,8 +6,6 @@
 1. Clone repo in $HOME / $env.HOME
 2. cd dotfiles/
 3. stow cargo
-4. stow config
-5. stow fonts
     
 ## Alternatively (nushell only):
 1. Clone repo in $env.HOME 

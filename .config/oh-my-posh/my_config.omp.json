@@ -1,0 +1,195 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "style": "plain",
+          "template": "<#C40233>\u256d\u2500[<#007FFF>{{ .UserName }}</><#03C03C>@</><#007FFF>{{ .HostName }}</>]\u2500",
+          "type": "session"
+        },
+        {
+        "properties": {
+        "folder_separator_icon": "<#009F68>/</>",
+        "style": "full"
+        },
+          "foreground": "#007FFF",
+          "style": "plain",
+          "template": "<#C40233>[</>{{ .Path }}<#C40233>]</>",
+          "type": "path"
+        },
+        {
+          "foreground": "#FF9248",
+          "style": "plain",
+          "template": "<#C40233>\u2500(</>#<#C40233>)</>",
+          "type": "root"
+        }
+      ],
+      "type": "prompt",
+      "newline": true
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#3C873A",
+          "properties": {
+            "fetch_package_manager": true,
+            "npm_icon": " <#cc3a3a>\ue5fa</> ",
+            "yarn_icon": " <#348cba>\ue6a7</>"
+          },
+          "style": "plain",
+          "template": "<#C40233>(</>{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}<#C40233>)</>",
+          "type": "node"
+        },
+        {
+          "foreground": "#FFE873",
+          "style": "plain",
+          "template": "<#C40233>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}<#C40233>)</>",
+          "type": "python"
+        },
+        {
+          "foreground": "#ec2729",
+          "style": "plain",
+          "template": "<#C40233>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#C40233>)</>",
+          "type": "java"
+        },
+        {
+          "foreground": "#0d6da8",
+          "style": "plain",
+          "template": "<#C40233>(</>{{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }}<#C40233>)</>",
+          "type": "dotnet"
+        },
+        {
+          "foreground": "#06aad5",
+          "style": "plain",
+          "template": "<#C40233>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#C40233>)</>",
+          "type": "go"
+        },
+        {
+          "foreground": "#925837",
+          "style": "plain",
+          "template": "<#C40233>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#C40233>)</>",
+          "type": "rust"
+        },
+        {
+          "foreground": "#055b9c",
+          "style": "plain",
+          "template": "<#C40233>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#C40233>)</>",
+          "type": "dart"
+        },
+        {
+          "foreground": "#ce092f",
+          "style": "plain",
+          "template": "<#C40233>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#C40233>)</>",
+          "type": "angular"
+        },
+        {
+          "foreground": "#de1f84",
+          "style": "plain",
+          "template": "<#C40233>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#C40233>)</>",
+          "type": "aurelia"
+        },
+        {
+          "foreground": "#C40233",
+          "style": "plain",
+          "template": "<#1e293b>(</>{{ if .Error }}{{ .Error }}{{ else }}Nx {{ .Full }}{{ end }}<#1e293b>)</>",
+          "type": "nx"
+        },
+        {
+          "foreground": "#359a25",
+          "style": "plain",
+          "template": "<#C40233>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#C40233>)</>",
+          "type": "julia"
+        },
+        {
+          "foreground": "#9c1006",
+          "style": "plain",
+          "template": "<#C40233>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#C40233>)</>",
+          "type": "ruby"
+        },
+        {
+          "foreground": "#5398c2",
+          "style": "plain",
+          "template": "<#C40233>(</>{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}<#C40233>)</>",
+          "type": "azfunc"
+        },
+        {
+          "foreground": "#faa029",
+          "style": "plain",
+          "template": "<#C40233>(</>{{.Profile}}{{if .Region}}@{{.Region}}{{end}}<#C40233>)</>",
+          "type": "aws"
+        },
+        {
+          "foreground": "#316ce4",
+          "style": "plain",
+          "template": "<#C40233>(</>{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}<#C40233>)</>",
+          "type": "kubectl"
+        },
+        {
+          "foreground": "#C40233",
+          "foreground_templates": [
+            "{{if eq \"Charging\" .State.String}}#007FFF{{end}}",
+            "{{if eq \"Discharging\" .State.String}}#007FFF{{end}}",
+            "{{if eq \"Full\" .State.String}}#007FFF{{end}}"
+          ],
+          "properties": {
+            "charged_icon": "\uf240 ",
+            "charging_icon": "\uf1e6 ",
+            "discharging_icon": "\ue234 "
+          },
+          "style": "plain",
+          "template": "<#C40233>[</>{{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}%<#C40233>]\u2500</>",
+          "type": "battery"
+        },
+        {
+          "foreground": "#007FFF",
+          "properties": {
+            "time_format": "_2,15:04"
+          },
+          "style": "plain",
+          "template": "<#C40233>[</>\uf073{{ .CurrentDate | date .Format }}<#C40233>]</>",
+          "type": "time"
+        }
+      ],
+      "type": "prompt",
+      "newline": true
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "style": "plain",
+          "template": "<#C40233>\u2570\u2500",
+          "type": "text"
+        },
+        {
+          "foreground": "#03C03C",
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "style": "plain",
+          "template": "<#C40233>[</>{{ .HEAD }}{{ if .Staging.Changed }}<#00AA00> \u25cf {{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }}<#009F68> \u25cf {{ .Working.String }}</>{{ end }}<#C40233>]-</>",
+          "type": "git"
+        },
+        {
+          "foreground": "#009F68",
+          "foreground_templates": ["{{ if gt .Code 0 }}#009F68{{ end }}"],
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "<#C40233>\ue285\ueb9e \n ",
+          "type": "status"
+        }
+      ],
+      "type": "prompt",
+      "newline": true
+    }
+  ],
+  "version": 3
+}
