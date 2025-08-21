@@ -263,10 +263,20 @@ client.unfocused        $color2   $color1         $color2         $color1       
 client.focused_inactive $color2   $color1         $color2         $color1         $color1
 client.urgent           $color2   $color2         $color1         $color2         $color1
 
+#screenshot
 bindsym $mod+F11 exec grim -g "$(slurp)" - | wl-copy
+
+#lock screen when pressing power button
 bindsym XF86PowerOff exec swaylock
+
+#brightness control
 bindsym F7 exec brightnessctl s 5%-
 bindsym F8 exec brightnessctl s +5%
+
+#audio control
 bindsym F2 exec pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo -5%
 bindsym F3 exec pactl set-sink-volume alsa_output.pci-0000_00_1f.3.analog-stereo +5%
 bindsym F1 exec pactl set-sink-mute alsa_output.pci-0000_00_1f.3.analog-stereo toggle
+
+#network manager applet
+exec_always nm-applet indicator
