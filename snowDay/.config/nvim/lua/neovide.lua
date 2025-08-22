@@ -7,7 +7,7 @@ vim.g.neovide_cursor_vfx_mode = "railgun"
 vim.g.neovide_cursor_vfx_particle_lifetime = 1.0
 vim.g.neovide_cursor_vfx_particle_density = 2.0
 vim.g.neovide_cursor_vfx_particle_phase = 10.0
-vim.o.guifont = "JetBrainsMono Nerd Font:h12"
+vim.o.guifont = "Iosevka Nerd Font Mono:h13"
 
 vim.api.nvim_create_autocmd("InsertEnter", {
 callback = function() vim.g.neovide_cursor_vfx_mode = "" end,
