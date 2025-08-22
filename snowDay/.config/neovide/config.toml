@@ -1,0 +1,16 @@
+# idle = true
+vsync = true
+# size = [80x24]
+maximized = true
+
+
+
+# [font]
+# normal = ["JetBrainsMono Nerd Font"]
+# size = 12.0
+
+# [box-drawing]
+# mode = "font-glyph"
+
+
+

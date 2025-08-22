@@ -1,0 +1,161 @@
+{
+"layer": "top",
+"height": 25,
+"spacing": 2,
+"margin-top": 0,
+"margin-right": 0,
+"margin-left": 0,
+
+"modules-left": [
+"sway/workspaces",
+"tray",
+"hyprland/window"
+],
+
+"modules-right": ["clock"],
+
+"modules-center": [
+"custom/center_group",
+"disk",
+"cpu",
+"memory",
+"temperature",
+"backlight",
+"pulseaudio",
+"battery"
+],
+
+"custom/rofi": {
+"format": "",
+"on-click": "rofi -show drun -disable-history -show-icons",
+"on-click-right": "~/.config/custom_scripts/power.sh",
+"escape": true,
+"tooltip": false
+},
+
+"custom/center_group": {
+"exec": "echo",
+"interval": 3600,
+"format": ""
+},
+
+"sway/workspaces": {
+"disable-scroll": true,
+"active-only": false,
+"all-outputs": true,
+"warp-on-scroll": false,
+"format": "{icon}",
+"format-icons": {
+"1": "1: ",
+"2": "2: 󰈹",
+"3": "3",
+"4": "4",
+"5": "5",
+"6": "6",
+"7": "7",
+"8": "8",
+"9": "9: ",
+"10": "10"
+}
+},
+
+"sway/window": {
+"format": "󰣆  {app_id}",
+"separate-outputs": true,
+"icon": false
+},
+
+"tray": {
+"icon-size": 15,
+"spacing": 8
+},
+
+"disk": {
+"format": "  {free}",
+"interval": 20
+},
+
+"clock#date": {
+"format": "  {:%e %b %Y}",
+"tooltip-format": "{:%e %B %Y}",
+"on-click": "~/work/scripts/popup-calendar.sh --popup"
+},
+
+"cpu": {
+"format": "  {usage}%",
+"tooltip": false,
+"interval": 1
+},
+
+"temperature": {
+"tooltip": false,
+"thermal-zone": 2,
+"hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+"critical-threshold": 70,
+"format": "  {temperatureC}°C",
+"format-critical": "  {temperatureC}°C"
+},
+
+"backlight": {
+"format": "󰞏  {percent}%",
+"tooltip": false
+},
+
+"memory": {
+"format": "  {}%",
+"interval": 5,
+"states": {
+"warning": 70,
+"critical": 90
+}
+},
+
+"custom/memory": {
+"exec": "~/.config/custom_scripts/memory_usage.sh",
+"interval": 2,
+"return-type": "json",
+"format": "  {}"
+},
+
+"pulseaudio": {
+"format": "  {volume}%",
+"format-muted": "  {volume}%",
+"format-bluetooth": "󰂰  {volume}%",
+"format-bluetooth-muted": "󰂲  {volume}%",
+"format-source": "{volume}% ",
+"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+"tooltip": false,
+"max-volume": 130
+},
+
+"battery#bat2": {
+"bat": "BAT2"
+},
+
+"battery": {
+"interval": 1,
+"states": {
+"good": 99,
+"warning": 30,
+"critical": 20
+},
+"format-icons": ["󰂎","󰁺","󰁻","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
+"format": "{icon}  {capacity}%",
+"format-critical": "{icon}  {capacity}%!!",
+"format-warning": "{icon}  {capacity}%",
+"format-full": "{icon}  {capacity}%",
+"format-charging": "󰂅  {capacity}%",
+"format-charging-warning": "󰢝  {capacity}%",
+"format-charging-critical": "󰢜  {capacity}%",
+"format-plugged": "󰂅  {capacity}%",
+"format-alt": "󱧥  {time}",
+"tooltip": false
+},
+
+"clock": {
+"timezone": "America/Chicago",
+"format": "  {:%a %d %b %H:%M:%S}",
+"tooltip": false,
+"interval": 1
+}
+}

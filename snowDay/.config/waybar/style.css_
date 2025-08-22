@@ -1,0 +1,162 @@
+window#waybar {
+--rosewater: #f4dbd6;
+--flamingo: #f0c6c6;
+--pink: #f5bde6;
+--mauve: #c6a0f6;
+--red: #ed8796;
+--maroon: #ee99a0;
+--peach: #f5a97f;
+--yellow: #eed49f;
+--green: #a6da95;
+--teal: #8bd5ca;
+--sky: #91d7e3;
+--sapphire: #7dc4e4;
+--blue: #8aadf4;
+--lavender: #b7bdf8;
+--text: #cad3f5;
+--subtext1: #b8c0e0;
+--subtext0: #a5adcb;
+--overlay2: #939ab7;
+--overlay1: #8087a2;
+--overlay0: #6e738d;
+--surface2: #5b6078;
+--surface1: #494d64;
+--surface0: #363a4f;
+--base: #24273a;
+--mantle: #1e2030;
+--crust: #181926;
+}
+
+/* Container */
+window#waybar {
+font-family: "JetBrains Mono Nerd Font", monospace;
+font-size: 11pt;
+height: 25px;
+opacity: 0.95;
+background: linear-gradient(180deg, var(--mantle), var(--base));
+color: var(--text);
+border-bottom: 2px solid var(--surface0);
+padding: 2px 6px;
+}
+
+/* Reset */
+window#waybar * {
+border: none;
+border-radius: 0;
+min-height: 0;
+}
+
+/* Left workspaces */
+window#waybar #workspaces {
+display: flex;
+gap: 6px;
+align-items: center;
+}
+window#waybar #workspaces button {
+background: transparent;
+color: var(--subtext1);
+padding: 0 8px;
+height: 22px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+border-radius: 4px;
+transition: background 120ms ease, color 120ms ease, transform 120ms ease;
+}
+
+/* Focused/active workspace highlight */
+window#waybar #workspaces button.focused,
+window#waybar #workspaces button.active {
+background-image: linear-gradient(180deg, var(--blue), var(--mauve));
+color: var(--crust);
+box-shadow: 0 1px 0 rgba(0,0,0,0.22) inset;
+}
+
+/* Urgent workspace */
+window#waybar #workspaces button.urgent {
+background-image: linear-gradient(180deg, var(--red), var(--maroon));
+color: var(--crust);
+}
+
+/* Center: visual group with rounded right end */
+window#waybar #center {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 0;
+padding: 0;
+}
+
+/* If you want the whole center area to look like a pill with rounded right end /
+window#waybar #center.grouped {
+background: linear-gradient(180deg, var(--surface1), var(--surface0));
+padding: 2px 10px;
+border-radius: 0 12px 12px 0; / rounded on right end */
+display: flex;
+gap: 8px;
+align-items: center;
+}
+
+/* If you don't add the .grouped class, style the center children as grouped */
+window#waybar #center:not(.grouped) {
+background: linear-gradient(180deg, var(--surface1), var(--surface0));
+padding: 2px 10px;
+border-radius: 0 12px 12px 0;
+gap: 8px;
+}
+
+/* Make center children transparent so the container forms the pill */
+window#waybar #center > * {
+background: transparent;
+color: var(--text);
+padding: 0 6px;
+display: inline-flex;
+align-items: center;
+}
+
+/* Last child rounded to match end cap */
+window#waybar #center > *:last-child {
+border-radius: 0 10px 10px 0;
+}
+
+/* Icon chips */
+.window-icon, .icon-chip {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+color: var(--crust);
+width: 18px;
+height: 18px;
+border-radius: 6px;
+margin-right: 6px;
+font-size: 10pt;
+line-height: 1;
+}
+
+/* Module-specific chip colors (ids from your config) */
+window#waybar #disk .icon-chip { background: var(--red); }
+window#waybar #cpu .icon-chip { background: var(--peach); }
+window#waybar #temperature .icon-chip { background: var(--yellow); }
+window#waybar #backlight .icon-chip { background: var(--yellow); }
+window#waybar #pulseaudio .icon-chip { background: var(--teal); }
+window#waybar #memory .icon-chip { background: var(--green); }
+window#waybar #battery .icon-chip { background: var(--green); }
+window#waybar #clock .icon-chip { background: var(--lavender); }
+
+/* Tray */
+window#waybar #tray {
+display: flex;
+gap: 6px;
+align-items: center;
+}
+
+/* Hover and transitions */
+window#waybar button, window#waybar .module {
+transition: background 120ms ease, color 120ms ease, transform 120ms ease;
+}
+window#waybar button:hover, window#waybar .module:hover {
+transform: translateY(-1px);
+}
+
+/* Fallback selectors for some Waybar versions */
+window#waybar .modules-center > div { display: contents; }
