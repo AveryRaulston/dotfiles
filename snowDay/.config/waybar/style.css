@@ -2,39 +2,54 @@
 @import url("./macchiato.css");
 * {
     border: none;
-    border-radius: 0;
     font-family: Iosevka Nerd Font Mono;
     font-size: 11.5pt;
     min-height: 0;
 }
 window#waybar {
-    opacity: 0.9;
-    background: @background;
+    /* opacity: 1; */
+    /* background: @background; */
+    /* background: rgba(36,39,58,0); */
+    background: @base;
+    /* backdrop-filter: blur(8px); */
+    /* -webkit-backdrop-filter: blur(8px); */
     color: @text;
-    border-bottom: 0px solid @background;
+    border-bottom: 0px solid @base;
+}
+#workspaces {
+    background: @surface1;
+    border-radius: 10px;
+    margin: 5px 5px;
 }
 #workspaces button {
-    padding: 0 10px;
-    background: @background;
-    color: @foreground;
+    padding: 0px 6px;
+    color: @red;
 }
 #workspaces button:hover {
     box-shadow: inherit;
     text-shadow: inherit;
-    background-image: linear-gradient(0deg, @selection, @background-darker);
+    background-image: linear-gradient(0deg, @selection, @base-darker);
 }
 #workspaces button.focused,
 #workspaces button.active {
     /* background-image: linear-gradient(0deg, @purple, @selection); */
-    background: @base;
+    color: @green;
 }
 #workspaces button.urgent {
-    background-image: linear-gradient(0deg, @red, @background-darker);
+    /* background-image: linear-gradient(0deg, @red, @base-darker); */
+    background: @red;
+    color: @teal;
+}
+#tray{
+    background: @surface1;
+    border-radius: 10px;
+    margin: 5px 5px;
+    padding: 0px 6px;
 }
 #taskbar button.active {
-    background-image: linear-gradient(0deg, @selection, @background-darker);
+    background-image: linear-gradient(0deg, @selection, @base-darker);
 }
 #clock {
     padding: 0 4px;
-    background: @background;
+    background: @base;
 }

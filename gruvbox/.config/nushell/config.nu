@@ -23,6 +23,10 @@ $env.config.edit_mode = "vi"
 $env.config.show_banner = false
 $env.LS_COLORS = (vivid generate gruvbox-dark-hard)
 $env.PATH = $env.PATH | prepend "~/.ghcup/bin/" | prepend "/home/user/.ghcup/ghc/9.6.7/bin" | prepend "~/.shellScripts"
+$env.config.cursor_shape = {
+    vi_insert: line
+    vi_normal: block
+}
 
 def --env r [] { 
     ranger --choosedir=/home/user/rangerdir
@@ -31,6 +35,7 @@ def --env r [] {
 }
 
 alias nv = nvim
+alias s = sudo shutdown now
 oh-my-posh init nu --config /usr/share/oh-my-posh/themes/gruvbox.omp.json
 
 

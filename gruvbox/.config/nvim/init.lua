@@ -8,6 +8,7 @@ vim.opt.expandtab = true
 vim.opt.smarttab = true
 vim.opt.relativenumber = true
 vim.opt.number = true
+vim.g.mapleader = ' '
 
 -- set transparent background
 vim.cmd [[
