@@ -94,7 +94,7 @@
 
   "disk": {
     "format": "<span color='#202020' bgcolor='#ea6962' >  </span> {free}",
-    "interval": 20
+    "interval": 600
   },
 
   "clock#date": {
@@ -108,7 +108,7 @@
   "cpu": {
     "format": "<span color='#202020' bgcolor='#e78a4e' >  </span> {usage}%",
     "tooltip": false,
-    "interval": 1
+    "interval": 10
   },
 
   "temperature": {
@@ -128,7 +128,7 @@
 
   "memory": {
     "format": " {}%", // Icon: memory
-    "interval": 5,
+    "interval": 10,
     "states": {
       "warning": 70,
       "critical": 90
@@ -136,12 +136,12 @@
   },
 
 
-  "custom/memory": {
-    "exec": "~/.config/custom_scripts/memory_usage.sh",
-    "interval": 2,
-    "return-type": "json",
-    "format": "<span color='#202020' bgcolor='#458588' >  </span> {}"
-  },
+  // "custom/memory": {
+  //   "exec": "~/.config/custom_scripts/memory_usage.sh",
+  //   "interval": 2,
+  //   "return-type": "json",
+  //   "format": "<span color='#202020' bgcolor='#458588' >  </span> {}"
+  // },
 
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -160,7 +160,8 @@
   },
 
   "battery": {
-    "interval": 1,
+    // "interval": 1,
+    "interval": 60,
     "states": {
       "good": 99,
       "warning": 30,
@@ -181,8 +182,8 @@
 
   "clock": {
     "timezone": "America/Chicago",
-    "format": "<span color='#202020' bgcolor='#8ec07c' >  </span> {:%a %d %b %H:%M:%S}",
+    "format": "<span color='#202020' bgcolor='#8ec07c' >  </span> {:%a %d %b %H:%M}",
     "tooltip": false,
-    "interval":1,
+    "interval":60,
   }
 }

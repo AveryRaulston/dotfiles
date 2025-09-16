@@ -17,12 +17,17 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 
-$env.EDITOR = "neovide"
+$env.EDITOR = "nvim"
 $env.config.history.max_size = 10000
 $env.config.edit_mode = "vi"
 $env.config.show_banner = false
-$env.LS_COLORS = (vivid generate catppuccin-mocha)
-$env.PATH = $env.PATH | prepend "~/.ghcup/bin/" | prepend "~/.ghcup/ghc/9.6.7/bin" | prepend "~/.shellScripts" | prepend "~/.local/bin/"
+$env.LS_COLORS = (vivid generate catppuccin-macchiato)
+$env.PATH = $env.PATH 
+    | prepend ($env.HOME + "/.ghcup/bin")
+    | prepend ($env.HOME + "/.ghcup/ghc/9.6.7/bin")
+    | prepend ($env.HOME + "/.shellScripts")
+    | prepend ($env.HOME + "/.local/bin")
+
 $env.config.cursor_shape = {
     vi_insert: line
     vi_normal: block
@@ -37,8 +42,7 @@ def --env r [] {
 alias nv = neovide
 alias s = sudo shutdown now
 
-oh-my-posh init nu --config /usr/share/oh-my-posh/themes/1_shell.omp.json
-
+oh-my-posh init nu --config /usr/share/oh-my-posh/themes/catppuccin_mocha.omp.json
 
 # Completer stuff below here
 

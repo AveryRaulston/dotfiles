@@ -22,7 +22,11 @@ $env.config.history.max_size = 10000
 $env.config.edit_mode = "vi"
 $env.config.show_banner = false
 $env.LS_COLORS = (vivid generate gruvbox-dark-hard)
-$env.PATH = $env.PATH | prepend "~/.ghcup/bin/" | prepend "/home/user/.ghcup/ghc/9.6.7/bin" | prepend "~/.shellScripts"
+$env.PATH = $env.PATH 
+    | prepend ($env.HOME + "/.ghcup/bin/")
+    | prepend ($env.HOME + "home/user/.ghcup/ghc/9.6.7/bin")
+    | prepend ($env.HOME + "/.shellScripts")
+
 $env.config.cursor_shape = {
     vi_insert: line
     vi_normal: block
