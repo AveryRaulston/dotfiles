@@ -30,7 +30,8 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function() 
-        require("lspconfig").pyright.setup({
+        vim.lsp.enable('pyright')
+        vim.lsp.config('pyright', {
             capabilities = require("cmp_nvim_lsp").default_capabilities(),
             settings = {
                 python = {
@@ -42,7 +43,8 @@ return {
                 },
             },
         })
-        require("lspconfig").nushell.setup({
+        vim.lsp.enable("nushell")
+        vim.lsp.config('nushell', {
             cmd = {
               "nu",
               -- "--config",
@@ -50,8 +52,8 @@ return {
               "--lsp",
             },
         })
-      require("lspconfig").clangd.setup({})
-      require("lspconfig").hls.setup({})
+      vim.lsp.enable("clangd")
+      vim.lsp.enable("hls")
     end,
   }
 }

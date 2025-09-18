@@ -253,8 +253,13 @@ gaps top 1
 #client.focused_inactive #453a3a #453a3a #453a3a #453a3a #453a3a
 
 
-set $color1     #3F4162
-set $color2     #C5A6D8
+# set $color1     #3F4162
+# set $color2     #C5A6D8
+
+# best so far
+set $color1     #24273a
+set $color2     #c6a0f6
+# set $color2     #b7bdf8
 
 #app_id                 border    bground         text            indicator       child_border
 client.focused          $color2   $color2         $color1         $color2         $color2

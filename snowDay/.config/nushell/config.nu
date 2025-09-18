@@ -21,7 +21,7 @@ $env.EDITOR = "nvim"
 $env.config.history.max_size = 10000
 $env.config.edit_mode = "vi"
 $env.config.show_banner = false
-$env.LS_COLORS = (vivid generate catppuccin-macchiato)
+$env.LS_COLORS = (vivid generate catppuccin-mocha)
 $env.PATH = $env.PATH 
     | prepend ($env.HOME + "/.ghcup/bin")
     | prepend ($env.HOME + "/.ghcup/ghc/9.6.7/bin")
