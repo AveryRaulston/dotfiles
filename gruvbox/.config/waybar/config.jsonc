@@ -108,7 +108,7 @@
   "cpu": {
     "format": "<span color='#202020' bgcolor='#e78a4e' >  </span> {usage}%",
     "tooltip": false,
-    "interval": 10
+    "interval": 2
   },
 
   "temperature": {
@@ -128,7 +128,7 @@
 
   "memory": {
     "format": " {}%", // Icon: memory
-    "interval": 10,
+    "interval": 2,
     "states": {
       "warning": 70,
       "critical": 90

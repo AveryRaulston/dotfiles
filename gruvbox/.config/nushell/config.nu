@@ -40,7 +40,7 @@ def --env r [] {
 
 alias nv = nvim
 alias s = sudo shutdown now
-oh-my-posh init nu --config /usr/share/oh-my-posh/themes/gruvbox.omp.json
+oh-my-posh init nu --config /usr/share/oh-my-posh/themes/hul10.omp.json
 
 
 # Completer stuff below here

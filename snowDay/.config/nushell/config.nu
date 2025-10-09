@@ -39,7 +39,7 @@ def --env r [] {
     rm /home/user/rangerdir
 }
 
-alias nv = neovide
+alias nv = nvim
 alias s = sudo shutdown now
 
 oh-my-posh init nu --config /usr/share/oh-my-posh/themes/catppuccin_mocha.omp.json
