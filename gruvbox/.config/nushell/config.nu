@@ -32,6 +32,18 @@ $env.config.cursor_shape = {
     vi_normal: block
 }
 
+#########################
+# temporary workaround for search functionalyity to keep working in
+#   man and less
+def --env man [...args] {
+  with-env { TERM: "xterm-256color" } { ^man ...$args }
+}
+
+def --env less [...args] {
+  with-env { TERM: "xterm-256color" } { ^less ...$args }
+}
+#########################
+
 def --env r [] { 
     ranger --choosedir=/home/user/rangerdir
     cd (cat /home/user/rangerdir)
