@@ -47,7 +47,7 @@ window#waybar.hidden {
 #battery.warning,
 #clock {
   font-family: JetBrainsMono Nerd Font ;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 800;
   color: #202020;
   background: #202020;
