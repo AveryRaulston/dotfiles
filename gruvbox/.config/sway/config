@@ -285,3 +285,6 @@ exec_always nm-applet indicator
 
 #screen sharing
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+#stacked windows instead of tiled
+workspace_layout stacking
