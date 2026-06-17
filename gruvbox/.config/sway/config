@@ -32,7 +32,8 @@ set $menu $rofi_cmd -show combi -combi-modes drun -show-icons -font "pango: JetB
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
-output * bg /home/user/.config/sway/streets_of_gruvbox.png fill
+# output * bg /home/user/.config/sway/streets_of_gruvbox.png fill
+output * bg /home/user/Pictures/Screenshots/Avatar/OceanSpiritTeamAvatar.png fill
 #
 # Example configuration:
 #
@@ -266,7 +267,7 @@ client.focused_inactive $color2   $color1         $color2         $color1       
 client.urgent           $color2   $color2         $color1         $color2         $color1
 
 #screenshot
-bindsym $mod+F11 exec grim -g "$(slurp)" - | wl-copy
+bindsym $mod+F11 exec grim -g "$(slurp)" - | wl-copy --type image/png
 
 #lock screen when pressing power button
 bindsym XF86PowerOff exec swaylock

@@ -18,6 +18,11 @@ highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 ]]
 
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { '*' },
+  callback = function() vim.treesitter.start() end,
+})
+
 
 -- Enable persistent cursor position
 vim.api.nvim_create_autocmd("BufReadPost", {
