@@ -9,7 +9,7 @@
   "modules-left": [
     //"custom/rofi",
     // "clock",
-    "sway/workspaces",
+    "hyprland/workspaces",
     // "sway/window",
     // "hyprland/workspaces",
     "tray",
@@ -37,7 +37,7 @@
 	},
 
   // Modules configuration
-  "sway/workspaces": {
+  "hyprland/workspaces": {
     "disable-scroll": true,
     "active-only": false,
     "all-outputs": true,

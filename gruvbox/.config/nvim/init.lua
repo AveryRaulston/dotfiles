@@ -1,3 +1,16 @@
+vim.g.haskell_tools = {
+  hls = {
+    settings = {
+      haskell = {
+        plugin = {
+          semanticTokens = {
+            globalOn = true,
+          },
+        },
+      },
+    },
+  },
+}
 require("config.lazy")
 --require("config.pluginconfigs")
 
@@ -8,6 +21,7 @@ vim.opt.expandtab = true
 vim.opt.smarttab = true
 vim.opt.relativenumber = true
 vim.opt.number = true
+vim.opt.hlsearch = true
 vim.g.mapleader = ' '
 
 -- set transparent background
@@ -19,7 +33,7 @@ highlight NonText ctermbg=none
 ]]
 
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { '*' },
+  pattern = { 'python', 'nu', 'rust', 'lua'},
   callback = function() vim.treesitter.start() end,
 })
 

@@ -30,7 +30,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function() 
-        vim.lsp.enable('pyright')
         vim.lsp.config('pyright', {
             capabilities = require("cmp_nvim_lsp").default_capabilities(),
             settings = {
@@ -43,7 +42,7 @@ return {
                 },
             },
         })
-        vim.lsp.enable("nushell")
+        vim.lsp.enable('pyright')
         vim.lsp.config('nushell', {
             cmd = {
               "nu",
@@ -52,8 +51,27 @@ return {
               "--lsp",
             },
         })
-      vim.lsp.enable("clangd")
-      vim.lsp.enable("hls")
+        vim.lsp.enable("nushell")
+        vim.lsp.enable("clangd")
+      --   vim.lsp.config('hls', {
+      --       settings = {
+      --           formattingProvider = 'fourmolu'
+      --       }
+      --   })
+        -- vim.lsp.enable("hls")
+        
+      -- vim.lsp.config('hls', {
+      --     cmd = { 'haskell-language-server-wrapper', '--lsp' },
+      --     filetypes = {'haskell', 'lhaskell'},
+      --     settings = {
+      --         haskell = {
+      --           cabalFormattingProvider = "cabal-fmt",
+      --           formattingProvider = "ormolu",
+      --           signatureHelp = 'true'
+      --         },
+      --      capabilities = require("cmp_nvim_lsp").default_capabilities(),
+      --    }
+      -- })
     end,
   }
 }
