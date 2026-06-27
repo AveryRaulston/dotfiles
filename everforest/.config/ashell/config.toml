@@ -1,0 +1,71 @@
+outputs = "All"
+layer = "Overlay"
+enable_esc_key = true
+region = "en-US"
+
+[appearance]
+font_name = "Iosevka Nerd Font"
+scale_factor = 1.1
+style = "Solid"
+text_color = "#DBBC7F"
+success_color = "#A7C080"
+warning_color = "#E69875"
+danger_color = "#E67E80"
+workspace_colors = ["#A7C080"]
+
+[appearance.menu]
+opacity = 0.5
+backdrop = 0.75
+
+[appearance.primary_color]
+base = "#A7C080"
+
+[appearance.background_color]
+base = "#3C4841"
+
+[osd]
+enabled = true
+timeout = 1500
+show_volume_percentage = true
+show_brightness_percentage = true
+
+[animations]
+enabled = true
+
+[modules]
+left = ["Workspaces"]
+center = ["SystemInfo"]
+right = [ ["WeatherF", "Tempo", "Privacy", "Settings" ] ]
+
+[settings]
+battery_format = "IconAndTime"
+max_volume = 150
+
+[tempo]
+timezones = ["America/Chicago"]
+clock_format = "%a %d %b %R"
+weather_location = "Current"
+weather_indicator = "Icon"
+#TODO: custom script for farenheit, also submit feature request
+
+[system_info]
+indicators = ["Cpu", "Memory", {Disk = "/", Name = "Disk"}, "IpAddress", "Temperature"]
+interval = 5
+
+[system_info.cpu]
+format = "Percentage"
+
+[system_info.memory]
+format = "Percentage"
+
+[system_info.disk]
+format = "Percentage"
+
+[system_info.temperature]
+sensor = "Cpu"
+warn_threshold = 150
+alert_threshold = 190
+
+[workspaces]
+group_by_monitor = true
+workspace_names = ["1:  ", "2: 󰈹", "3", "4", "5", "6", "7", "8", "9: ", "10: "]
