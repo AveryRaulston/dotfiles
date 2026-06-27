@@ -9,11 +9,11 @@
   "modules-left": [
     //"custom/rofi",
     // "clock",
-    "hyprland/workspaces",
+    "sway/workspaces",
     // "sway/window",
-    // "hyprland/workspaces",
+    // "sway/workspaces",
     "tray",
-    "hyprland/window",
+    "sway/window",
   ],
 
   "modules-right": ["clock"],
@@ -63,7 +63,7 @@
     "icon":false,
   },
 
-  // "hyprland/workspaces": {
+  // "sway/workspaces": {
   //   "disable-scroll": true,
   //   "active-only": false,
   //   "all-outputs": true,
@@ -81,7 +81,7 @@
   //   }
   // },
   //
-  // "hyprland/window": {
+  // "sway/window": {
   //   "format": "<span color='#202020' bgcolor='#d3869b' > 󰣆 </span> {class}",
   //   "separate-outputs": true,
   //   "icon":false,
