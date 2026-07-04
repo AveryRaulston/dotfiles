@@ -17,20 +17,23 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 
+
 $env.EDITOR = "nvim"
 $env.config.history.max_size = 10000
 $env.config.edit_mode = "vi"
 $env.config.show_banner = false
-$env.LS_COLORS = (vivid generate gruvbox-dark-hard)
 $env.PATH = $env.PATH 
     | prepend ($env.HOME + "/.ghcup/bin/")
     # | prepend ($env.HOME + "/.ghcup/ghc/9.10.3/bin")
     | prepend ($env.HOME + "/.shellScripts")
+    | prepend ($env.HOME + "/.local/bin/")
 
 $env.config.cursor_shape = {
     vi_insert: line
     vi_normal: block
 }
+
+
 
 #########################
 # temporary workaround for search functionalyity to keep working in
@@ -52,8 +55,6 @@ def --env r [] {
 
 alias nv = nvim
 alias s = sudo shutdown now
-oh-my-posh init nu --config /usr/share/oh-my-posh/themes/hul10.omp.json
-
 
 # Completer stuff below here
 
@@ -72,3 +73,5 @@ let fish_completer = {|spans|
 }
 
 $env.config.completions.external.completer = $fish_completer
+
+# oh-my-posh init nu --config /usr/share/oh-my-posh/themes/gruvbox.omp.json

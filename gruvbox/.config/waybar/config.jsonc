@@ -10,10 +10,9 @@
     //"custom/rofi",
     // "clock",
     "sway/workspaces",
-    // "sway/window",
     // "sway/workspaces",
-    "tray",
-    "sway/window",
+    "tray"
+    // "sway/window",
   ],
 
   "modules-right": ["clock"],
@@ -25,7 +24,7 @@
     "temperature",
     "backlight",
     "pulseaudio",
-    "battery",
+    "battery"
   ],
 
   "custom/rofi": {
@@ -37,7 +36,7 @@
 	},
 
   // Modules configuration
-  "hyprland/workspaces": {
+  "sway/workspaces": {
     "disable-scroll": true,
     "active-only": false,
     "all-outputs": true,
@@ -107,8 +106,8 @@
 
   "cpu": {
     "format": "<span color='#202020' bgcolor='#e78a4e' >  </span> {usage}%",
-    "tooltip": false,
-    "interval": 2
+    "tooltip": true,
+    "interval": 2,
   },
 
   "temperature": {
@@ -132,7 +131,8 @@
     "states": {
       "warning": 70,
       "critical": 90
-    }
+    },
+    "tooltip": true
   },
 
 
@@ -183,7 +183,7 @@
   "clock": {
     "timezone": "America/Chicago",
     "format": "<span color='#202020' bgcolor='#8ec07c' >  </span> {:%a %d %b %H:%M}",
-    "tooltip": false,
+    "tooltip": true,
     "interval":60,
   }
 }

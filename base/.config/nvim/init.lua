@@ -104,6 +104,7 @@ vim.keymap.set("n", " rp", ":IPythonRun<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", " vt", ":ToggleVirtualText<CR>", { noremap = true, silent = true})
 vim.keymap.set("n", " bl", ":BlackCurrentFile<CR>", { noremap = true, silent = true})
 vim.keymap.set("n", " cf", ":ClangFormatCurrentFile<CR>", { noremap = true, silent = true})
+vim.keymap.set("n", " s", "<Plug>(leap)")
 
 --turn off highlighting after a search by pressing esc
 vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>')

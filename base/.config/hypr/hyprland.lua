@@ -43,6 +43,7 @@ hl.monitor({
 local terminal    = "kitty"
 local fileManager = "thunar"
 local menu        = 'rofi -show combi -combi-modes drun -show-icons -font "pango: JetBrainsMonoNerdFont-Regular 12"'
+local ipc         = 'qs -c noctalia-shell ipc call '
 
 
 -------------------
@@ -55,13 +56,15 @@ local menu        = 'rofi -show combi -combi-modes drun -show-icons -font "pango
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function () 
-  hl.exec_cmd("nm-applet")
-  hl.exec_cmd("ashell")
+  -- hl.exec_cmd("nm-applet")
+  -- hl.exec_cmd("hyprpaper & hypridle")
+  hl.exec_cmd("qs -c noctalia-shell")
 end)
 
-hl.on("config.reloaded", function()
-    hl.exec_cmd("ashell")
-end)
+-- hl.on("config.reloaded", function()
+--     os.execute("pkill noctalia")
+--     hl.exec_cmd("qs -c noctalia-shell")
+-- end)
 
 
 -------------------------------
@@ -174,16 +177,29 @@ hl.device({
 local mainMod = "ALT" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.close())
--- closeWindowBind:set_enabled(false)
+
+hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({action = "toggle"}))
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"))
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + E", hl.dsp.layout("togglesplit"))    -- dwindle only
-hl.bind(mainMod .. " + T" ,hl.dsp.layout(""))
+hl.bind(mainMod .. " + F11", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy --type image/png'))
+
+-- noctalia binds
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(ipc .. "launcher toggle"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(ipc .. "settings toggle"))
+hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(ipc .. "controlCenter toggle"))
+
+-- Laptop multimedia keys for volume and LCD brightness
+hl.bind("F1", hl.dsp.exec_cmd(ipc .. "volume muteOutput"),   { locked = true, repeating = true })
+hl.bind("F3", hl.dsp.exec_cmd(ipc .. "volume increase"),     { locked = true, repeating = true })
+hl.bind("F2", hl.dsp.exec_cmd(ipc .. "volume decrease"),     { locked = true, repeating = true })
+hl.bind("F8", hl.dsp.exec_cmd(ipc .. "brightness increase"), { locked = true, repeating = true })
+hl.bind("F7", hl.dsp.exec_cmd(ipc .. "brightness decrease"), { locked = true, repeating = true })
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
@@ -195,6 +211,11 @@ hl.bind(mainMod .. " + H",     hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + L",     hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + K",     hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + J",     hl.dsp.focus({ direction = "down" }))
+-- Move windows with mainMod + shift + vim keys
+hl.bind(mainMod .. " + SHIFT + K",     hl.dsp.layout("swapcol l"))
+hl.bind(mainMod .. " + SHIFT + J",     hl.dsp.layout("swapcol r"))
+hl.bind(mainMod .. " + SHIFT + L",     hl.dsp.layout("swapcol l"))
+hl.bind(mainMod .. " + SHIFT + H",     hl.dsp.layout("swapcol r"))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
@@ -216,14 +237,8 @@ hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
--- Laptop multimedia keys for volume and LCD brightness
-hl.bind("F3", hl.dsp.exec_cmd("ashell msg volume-up"), { locked = true, repeating = true })
-hl.bind("F2", hl.dsp.exec_cmd("ashell msg volume-down"),      { locked = true, repeating = true })
-hl.bind("F1", hl.dsp.exec_cmd("ashell msg volume-toggle-mute"),     { locked = true, repeating = true })
-hl.bind("F4", hl.dsp.exec_cmd("ashell msg toggle-visibility"),     { locked = true, repeating = true })
+
 hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),   { locked = true, repeating = true })
-hl.bind("F8",  hl.dsp.exec_cmd("ashell msg brightness-up"),                  { locked = true, repeating = true })
-hl.bind("F7",hl.dsp.exec_cmd("ashell msg brightness-down"),                  { locked = true, repeating = true })
 
 -- Requires playerctl
 hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = true })
@@ -272,6 +287,14 @@ hl.window_rule({
 --     no_anim = true,
 -- })
 -- overlayLayerRule:set_enabled(false)
+--
+hl.layer_rule({
+    name = noctalia,
+    match = {namespace = "noctalia-background-.*$"},
+    ignore_alpha = 0.5,
+    blur = true,
+    blur_popups = true
+})
 
 -- Hyprland-run windowrule
 hl.window_rule({
